@@ -1,6 +1,4 @@
 import React from "react";
-import axios from "axios";
-import { setPizzas } from "./redux/actions/pizzas";
 import { useDispatch } from "react-redux";
 
 import { Header } from "./components";
@@ -11,11 +9,7 @@ import { Route } from "react-router-dom";
 function App() {
   const dispatch = useDispatch();
 
-  React.useEffect(() => {
-    axios.get("http://localhost:3000/pizzas").then(({ data }) => {
-      dispatch(setPizzas(data));
-    });
-  }, [dispatch]);
+  
 
   return (
     <div className="wrapper">

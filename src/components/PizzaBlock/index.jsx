@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import PizzaLoadingBlock from "./PizzaLoadingBlock";
 
 function PizzaBlock({ name, imageUrl, price, types, sizes }) {
   const avaibleTypes = ["тонкое", "традиционное"];
@@ -13,8 +14,6 @@ function PizzaBlock({ name, imageUrl, price, types, sizes }) {
   const onSelectSize = (index) => {
     setActiveSize(index);
   };
-
-  
 
   return (
     <div className="pizza-block">
